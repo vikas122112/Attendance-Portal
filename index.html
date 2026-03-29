@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendance Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="main">
+
+  <!--headers for web-->
+  <div class="header">
+    <img src="Jb-Knowledge-Park-JB-College-Faridabad.logo_.webp " class="logo">
+    <div>
+      <h1>JB Knowledge Park</h1>
+      <h2>Attendance Portal</h2>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <div class="form">
+    <input type="text" id="name" placeholder="Student Name">
+    <input type="text" id="erp" placeholder="ERP Number">
+    <input type="text" id="year" placeholder="Semester">
+    <select id="course">
+    <option value="">Select Course</option>
+    <option value="Computer Science">Computer Science</option>
+    <option value="Electrical Engineering">Electrical Engineering</option>
+    <option value="Mechanical Engineering">Mechanical Engineering</option>
+    <option value="Civil Engineering">Civil Engineering</option>
+    <option value="Electronics & Communication">Electronics & Communication</option>
+</select>
+
+
+    <button onclick="openModal()">Save</button>
+  </div>
+
+  <!-- Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>ERP</th>
+        <th>Year</th>
+        <th>Course</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <h3>Mark Attendance</h3>
+    <button onclick="markAttendance('Present')">Present</button>
+    <button onclick="markAttendance('Absent')">Absent</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
